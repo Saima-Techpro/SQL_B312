@@ -290,7 +290,26 @@ WHERE email_address LIKE '%p______';
 --Select 'states' whose second character is 'e' and it has at least 6 characters
 --Select state which has 'i' in any position after second character
 
+-- SOLUTION
 
+--Select employee names which start with 'E'
+SELECT * FROM company_employees WHERE name LIKE 'E%';
+--Select employee names which ends with 'e'
+SELECT * FROM company_employees WHERE name LIKE '%e';
+--Select employee names which starts with 'B' and ends with 't'
+SELECT * FROM company_employees WHERE name LIKE 'B%' AND name LIKE '%t';
+--Select employee names which has 'a' in any position
+SELECT * FROM company_employees WHERE name LIKE '%a%';
+--Select employee names which has 'e' and 'r' in any position
+SELECT * FROM company_employees WHERE name LIKE '%e%' AND name LIKE '%r%';
+--Select state whose second character is 'e' and fourth is 'n'
+SELECT * FROM company_employees WHERE state LIKE '_e%' AND name LIKE '___n%';
+--Select state whose second last character is 'i'
+SELECT * FROM company_employees WHERE state LIKE '%i_';
+--Select 'states' whose second character is 'e' and it has at least 6 characters
+SELECT * FROM company_employees WHERE state LIKE '_e____%';
+--Select state which has 'i' in any position after second character
+SELECT * FROM company_employees WHERE state LIKE '__%i%';
 
 SELECT * FROM email_list;
 
